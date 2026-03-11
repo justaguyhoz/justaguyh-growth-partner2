@@ -152,6 +152,18 @@ img {
   max-width: 680px;
   margin: 0 0 30px;
 }
+.hero-image {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.hero-image img {
+  width:100%;
+  max-width:420px;
+  border-radius:18px;
+  box-shadow:0 20px 45px rgba(0,0,0,0.15);
+}
 
 .page-main {
   background: #ffffff;
