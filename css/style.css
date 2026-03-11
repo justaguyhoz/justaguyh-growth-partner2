@@ -114,10 +114,10 @@ img {
 
 .hero {
   background:
-    radial-gradient(circle at top left, rgba(29, 78, 216, 0.22), transparent 30%),
-    linear-gradient(180deg, #0b1020 0%, #121a31 100%);
-  color: var(--white);
-  padding: 88px 0 72px;
+  radial-gradient(circle at top left, rgba(29,78,216,0.15), transparent 40%),
+  linear-gradient(180deg,#0b1020 0%,#121a31 100%);
+  color:white;
+  padding:90px 0 70px;
 }
 
 .hero-grid {
