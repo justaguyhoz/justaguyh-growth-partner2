@@ -638,3 +638,56 @@ textarea:focus {
   color:white;
   padding:90px 0 70px;
 }
+.case-subtitle {
+  margin: 8px 0 0;
+  font-size: 1.02rem;
+  color: var(--text-light);
+}
+
+.result-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin: 26px 0 30px;
+}
+
+.metric-box {
+  background: var(--panel-soft);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-small);
+  padding: 22px;
+}
+
+.metric-box h3 {
+  margin: 0 0 8px;
+  font-size: 2rem;
+  line-height: 1;
+  color: var(--accent);
+}
+
+.metric-box p {
+  margin: 0 0 6px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.metric-box span {
+  color: var(--text-light);
+  font-size: 0.92rem;
+}
+
+.case-quote {
+  margin: 0;
+  padding: 18px 20px;
+  background: var(--panel-soft);
+  border-left: 4px solid var(--accent);
+  border-radius: 12px;
+  color: var(--text);
+  font-style: italic;
+}
+
+@media (max-width: 980px) {
+  .result-metrics {
+    grid-template-columns: 1fr;
+  }
+}
