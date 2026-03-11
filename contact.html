@@ -42,29 +42,28 @@
     <section class="section">
       <div class="container narrow">
         <div class="contact-panel">
-          <form name="contact" method="POST" data-netlify="true" action="/thanks.html" netlify-honeypot="bot-field">
-            <input type="hidden" name="form-name" value="contact" />
-            <p class="hidden-field">
-              <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
-            </p>
+         <form name="contact" method="POST" data-netlify="true">
 
-            <div class="form-row">
-              <label for="name">Name</label>
-              <input id="name" type="text" name="name" required />
-            </div>
+<input type="hidden" name="form-name" value="contact">
 
-            <div class="form-row">
-              <label for="email">Email</label>
-              <input id="email" type="email" name="email" required />
-            </div>
+<p style="display:none;">
+<label>Don't fill this out if you're human:
+<input name="bot-field">
+</label>
+</p>
 
-            <div class="form-row">
-              <label for="message">Message</label>
-              <textarea id="message" name="message" rows="6" required></textarea>
-            </div>
+<label>Name</label>
+<input type="text" name="name" required>
 
-            <button type="submit" class="btn">Send message</button>
-          </form>
+<label>Email</label>
+<input type="email" name="email" required>
+
+<label>Message</label>
+<textarea name="message" required></textarea>
+
+<button type="submit">Send message</button>
+
+</form>
 
           <div class="contact-links">
             <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/guy-hozavsky" target="_blank" rel="noopener">www.linkedin.com/in/guy-hozavsky</a></p>
