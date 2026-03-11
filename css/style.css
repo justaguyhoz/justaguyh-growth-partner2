@@ -573,3 +573,30 @@ textarea:focus {
     padding: 22px;
   }
 }
+.results-bar{
+  background:#f4f7fb;
+  padding:50px 0;
+}
+
+.results-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:30px;
+  text-align:center;
+}
+
+.result-item h3{
+  font-size:42px;
+  margin:0;
+  color:#1d4ed8;
+}
+
+.result-item p{
+  margin:6px 0;
+  font-weight:600;
+}
+
+.result-item span{
+  color:#666;
+  font-size:14px;
+}
