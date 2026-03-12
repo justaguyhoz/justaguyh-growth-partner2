@@ -839,3 +839,33 @@ height:30px;
 margin-top:20px;
 opacity:.7;
 }
+.contact-panel-simple{
+  text-align:left;
+}
+
+.contact-panel-simple h2{
+  margin-top:0;
+  margin-bottom:14px;
+}
+
+.contact-panel-simple p{
+  color:var(--text-light);
+}
+
+.contact-actions{
+  margin-top:24px;
+  margin-bottom:28px;
+}
+
+.contact-links p{
+  margin:10px 0;
+}
+
+.contact-links a{
+  color:var(--accent);
+  font-weight:600;
+}
+
+.contact-links a:hover{
+  text-decoration:underline;
+}
