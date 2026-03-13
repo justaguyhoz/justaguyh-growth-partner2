@@ -892,19 +892,19 @@ color:#666;
 }
 /* Bigger client logos */
 .logos-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 28px 30px;
   align-items: center;
-  gap: 42px 56px;
 }
 
 .logos-grid img {
-  height: 150px;
-  max-width: 320px;
+  height: 72px;
+  max-width: 100%;
   width: auto;
+  margin: 0 auto;
   object-fit: contain;
-  opacity: 0.82;
+  opacity: 0.8;
   filter: grayscale(100%);
   transition: transform 0.25s ease, opacity 0.25s ease, filter 0.25s ease;
 }
