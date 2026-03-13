@@ -1031,3 +1031,56 @@ textarea:focus {
     font-size: 14px !important;
   }
 }
+/* Final mobile and desktop stats refinement */
+.results-bar {
+  padding: 38px 0 !important;
+}
+
+.results-grid {
+  gap: 18px !important;
+}
+
+.result-item h3 {
+  font-size: clamp(4.4rem, 7vw, 5.8rem) !important;
+  margin: 0 0 6px !important;
+  line-height: 0.92 !important;
+  color: #0f172a !important;
+}
+
+.result-item p {
+  margin: 0 0 4px !important;
+  font-size: 1rem !important;
+  line-height: 1.15 !important;
+  font-weight: 700 !important;
+  color: #0f172a !important;
+}
+
+.result-item span {
+  font-size: 0.9rem !important;
+  line-height: 1.3 !important;
+  color: #667085 !important;
+}
+
+@media (max-width: 760px) {
+  .results-bar {
+    padding: 28px 0 !important;
+  }
+
+  .results-grid {
+    gap: 18px !important;
+  }
+
+  .result-item h3 {
+    font-size: clamp(3.8rem, 13vw, 4.8rem) !important;
+    margin: 0 0 4px !important;
+  }
+
+  .result-item p {
+    font-size: 0.95rem !important;
+    margin: 0 0 2px !important;
+  }
+
+  .result-item span {
+    font-size: 0.85rem !important;
+  }
+}
