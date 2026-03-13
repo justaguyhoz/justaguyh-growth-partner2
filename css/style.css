@@ -655,10 +655,9 @@ textarea:focus {
   flex-wrap:wrap;
 }
 
-.logo-item{
-  font-size:18px;
-  font-weight:600;
-  color:#222;
+.logo-item {
+  font-size: 1.35rem;
+  line-height: 1.2;
 }
 .hero{
   background:
