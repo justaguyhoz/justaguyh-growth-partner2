@@ -602,29 +602,51 @@ textarea:focus {
     padding: 22px;
   }
 }
-.results-bar{
-  background:#f4f7fb;
-  padding:50px 0;
+.results-bar {
+  background: #f4f7fb;
+  padding: 54px 0;
 }
 
-.results-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:30px;
-  text-align:center;
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+  text-align: center;
+  align-items: start;
+}
+
+.result-item {
+  text-align: center;
+  max-width: 100%;
+  margin: 0 auto;
 }
 
 .result-item h3 {
-  font-size: clamp(5.8rem, 11vw, 8.8rem);
-
-.result-item p{
-  margin:6px 0;
-  font-weight:600;
+  font-size: clamp(4.2rem, 8vw, 6.2rem);
+  margin: 0 0 12px;
+  color: #1d4ed8;
+  line-height: 0.92;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2px;
+  font-weight: 700;
+  letter-spacing: -2px;
 }
 
-.result-item span{
-  color:#666;
-  font-size:14px;
+.result-item p {
+  margin: 0 0 6px;
+  font-weight: 700;
+  font-size: 1.15rem;
+  line-height: 1.2;
+  color: #0f172a;
+}
+
+.result-item span {
+  color: #667085;
+  font-size: 0.98rem;
+  line-height: 1.35;
+  display: block;
 }
 .trusted-section{
   padding:60px 0;
