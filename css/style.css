@@ -1084,3 +1084,67 @@ textarea:focus {
     font-size: 0.85rem !important;
   }
 }
+/* Stronger mobile-first stats hierarchy */
+.results-bar {
+  padding: 26px 0 !important;
+}
+
+.results-grid {
+  gap: 16px !important;
+}
+
+.result-item h3,
+.result-item .count,
+.result-item .suffix {
+  font-size: 72px !important;
+  line-height: 0.9 !important;
+  font-weight: 700 !important;
+  color: #0f172a !important;
+}
+
+.result-item h3 {
+  margin: 0 0 2px !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: flex-start !important;
+  gap: 2px !important;
+}
+
+.result-item p {
+  margin: 0 0 2px !important;
+  font-size: 15px !important;
+  line-height: 1.1 !important;
+  font-weight: 700 !important;
+  color: #0f172a !important;
+}
+
+.result-item span {
+  font-size: 13px !important;
+  line-height: 1.25 !important;
+  color: #667085 !important;
+}
+
+/* Desktop */
+@media (min-width: 761px) {
+  .results-bar {
+    padding: 34px 0 !important;
+  }
+
+  .results-grid {
+    gap: 18px !important;
+  }
+
+  .result-item h3,
+  .result-item .count,
+  .result-item .suffix {
+    font-size: 88px !important;
+  }
+
+  .result-item p {
+    font-size: 17px !important;
+  }
+
+  .result-item span {
+    font-size: 14px !important;
+  }
+}
