@@ -831,9 +831,12 @@ color:#666;
 }
 
 .testimonial-card img{
-height:30px;
-margin-top:20px;
-opacity:.7;
+  height: 22px;
+  max-width: 120px;
+  width: auto;
+  margin-top: 18px;
+  opacity: .7;
+  object-fit: contain;
 }
 .contact-panel-simple{
   text-align:left;
