@@ -137,12 +137,355 @@ img {
   align-items: center;
 }
 
-.hero-image img {
-  width: 100%;
-  max-width: 420px;
-  border-radius: 18px;
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>Guy Hozavsky | Growth Marketing Consultant</title>
+
+<meta name="description" content="Growth marketing, paid media, Shopify optimisation, CRO and practical strategy for ambitious businesses." />
+
+<link rel="canonical" href="https://justaguyh.com/">
+
+<!-- Favicon -->
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="icon" href="/favicon.ico">
+<link rel="manifest" href="/site.webmanifest">
+
+<!-- Open Graph (Facebook / LinkedIn / Slack etc) -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://justaguyh.com/">
+<meta property="og:title" content="Guy Hozavsky | Growth Marketing Consultant">
+<meta property="og:description" content="Growth marketing, paid media, Shopify optimisation, CRO and practical strategy for ambitious businesses.">
+<meta property="og:image" content="https://justaguyh.com/images/social-share.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<!-- Twitter preview -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Guy Hozavsky | Growth Marketing Consultant">
+<meta name="twitter:description" content="Growth marketing, paid media, Shopify optimisation, CRO and practical strategy for ambitious businesses.">
+<meta name="twitter:image" content="https://justaguyh.com/images/social-share.jpg">
+
+<!-- Styles -->
+<link rel="stylesheet" href="/css/style.css" />
+
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="index.html" class="brand">Guy Hozavsky</a>
+
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="site-nav">
+        <a href="index.html" class="active">Home</a>
+        <a href="services.html">Services</a>
+        <a href="work.html">Work</a>
+        <a href="about.html">About</a>
+        <a href="contact.html" class="btn btn-outline btn-small">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">Gold Coast, Australia</p>
+          <h1>Paid media, Shopify and growth support that moves the numbers.</h1>
+          <p class="hero-text">
+            Direct strategy and execution for brands that need progress, not agency fluff.
+          </p>
+
+          <div class="hero-actions">
+            <a href="services.html" class="btn">View services</a>
+            <a href="work.html" class="btn btn-secondary">View work</a>
+          </div>
+
+          <div class="hero-points">
+            <span>Google Ads</span>
+            <span>Meta Ads</span>
+            <span>Shopify</span>
+            <span>CRO</span>
+            <span>Strategy</span>
+          </div>
+        </div>
+
+        <div class="hero-image reveal reveal-stagger-1">
+          <img src="images/guy-hozavsky.jpg" alt="Guy Hozavsky">
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-intro">
+          <p class="eyebrow reveal">What I do</p>
+          <h2 class="reveal reveal-stagger-1">Strategy and execution, in one place.</h2>
+        </div>
+
+        <div class="card-grid">
+          <article class="feature-card reveal reveal-stagger-1">
+            <h3>Paid media</h3>
+            <p>Google Ads and Meta campaigns planned, built and optimised for commercial return.</p>
+          </article>
+
+          <article class="feature-card reveal reveal-stagger-2">
+            <h3>Shopify and CRO</h3>
+            <p>Storefront improvements, landing pages and conversion-focused changes that help stores sell more.</p>
+          </article>
+
+          <article class="feature-card reveal reveal-stagger-3">
+            <h3>Marketing strategy</h3>
+            <p>Clear channel direction, messaging priorities and practical next steps.</p>
+          </article>
+
+          <article class="feature-card reveal reveal-stagger-4">
+            <h3>Content direction</h3>
+            <p>Ad angles, website messaging and campaign ideas that support traffic and conversion.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-intro">
+          <p class="eyebrow reveal">Services</p>
+          <h2 class="reveal reveal-stagger-1">Clear offers for businesses that need real progress.</h2>
+        </div>
+
+        <div class="card-grid packages-teaser-grid">
+          <article class="feature-card reveal reveal-stagger-1">
+            <p class="case-tag">Website Build</p>
+            <h3>Wix or Squarespace website</h3>
+            <p>Clean, professional websites for service businesses, consultants and small brands.</p>
+            <p class="package-meta"><strong>From $1,500</strong> - 2 to 3 weeks</p>
+            <a href="services.html#website-build" class="text-link">View service</a>
+          </article>
+
+          <article class="feature-card reveal reveal-stagger-2">
+            <p class="case-tag">Shopify</p>
+            <h3>Shopify store build or rebuild</h3>
+            <p>Conversion-focused Shopify setup, structure, and storefront improvements.</p>
+            <p class="package-meta"><strong>From $2,500</strong> - 3 to 4 weeks</p>
+            <a href="services.html#shopify-build" class="text-link">View service</a>
+          </article>
+
+          <article class="feature-card reveal reveal-stagger-3">
+            <p class="case-tag">Paid Media</p>
+            <h3>Paid campaign setup</h3>
+            <p>Google Ads, Meta Ads or Microsoft Ads built properly before budget gets wasted.</p>
+            <p class="package-meta"><strong>From $900</strong> - 5 to 7 days</p>
+            <a href="services.html#campaign-setup" class="text-link">View service</a>
+          </article>
+
+          <article class="feature-card reveal reveal-stagger-4">
+            <p class="case-tag">Ongoing Support</p>
+            <h3>Growth support and optimisation</h3>
+            <p>Ongoing campaign management, reporting and practical improvements.</p>
+            <p class="package-meta"><strong>From $1,200/mo</strong> - ongoing</p>
+            <a href="services.html#growth-support" class="text-link">View service</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonials">
+      <div class="container">
+        <p class="section-label reveal">Testimonials</p>
+        <h2 class="section-title reveal reveal-stagger-1">What clients say</h2>
+
+        <div class="testimonial-grid">
+          <div class="testimonial-card reveal reveal-stagger-1">
+            <p class="testimonial-text">
+              "I have been working with Guy for a year now on several projects. He demonstrated professionalism and quality of work together with always delivering on time solutions and meeting deadlines without a problem. His attitude and overall approach are creative, refreshing, and effective."
+            </p>
+
+            <div class="testimonial-author">
+              <strong>Mordechai Tenzer</strong>
+              <span>Creative Manager</span>
+            </div>
+
+            <img src="images/sniper.png" alt="Sniper Digital Strategy Technology">
+          </div>
+
+          <div class="testimonial-card reveal reveal-stagger-2">
+            <p class="testimonial-text">
+              "I’m so glad I found Guy! It’s hard to find great copywriters who really understand the motivations behind customer behavior. He quickly pulls together a cohesive story across campaigns, brands, and user journeys. I highly recommend Guy to any business or agency looking for a creative brain."
+            </p>
+
+            <div class="testimonial-author">
+              <strong>Lauren Kress</strong>
+              <span>The Business Scientist</span>
+            </div>
+
+            <img src="images/laurenkress.png" alt="Lauren Kress">
+          </div>
+
+          <div class="testimonial-card reveal reveal-stagger-3">
+            <p class="testimonial-text">
+              "I have been working with Guy for well over two years and I am very happy with his copywriting skills and excellent proactive approach. Working with Guy is a professional process with outstanding outcomes."
+            </p>
+
+            <div class="testimonial-author">
+              <strong>Yaron Gal</strong>
+              <span>Property Investment Specialist</span>
+            </div>
+
+            <img src="images/invest-properties.png" alt="Invest In Properties">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="results-bar">
+      <div class="container">
+        <div class="results-grid">
+          <div class="result-item reveal reveal-stagger-1">
+            <h3><span class="count" data-target="25">0</span><span class="suffix">%</span></h3>
+            <p>YoY Revenue Growth</p>
+            <span>Golf Skate Caddy</span>
+          </div>
+
+          <div class="result-item reveal reveal-stagger-2">
+            <h3><span class="count" data-target="37">0</span><span class="suffix">%</span></h3>
+            <p>Revenue Growth</p>
+            <span>Paloma Architectural Joinery</span>
+          </div>
+
+          <div class="result-item reveal reveal-stagger-3">
+            <h3><span class="count" data-target="18">0</span></h3>
+            <p>Years</p>
+            <span>Building revenue-driven marketing</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-intro">
+          <p class="eyebrow reveal">Why work with me</p>
+          <h2 class="reveal reveal-stagger-1">Direct support with commercial thinking.</h2>
+        </div>
+
+        <div class="split-grid">
+          <div class="panel reveal reveal-stagger-1">
+            <h3>Not just strategy</h3>
+            <p>
+              I do the thinking and the work - campaigns, messaging, landing pages, Shopify and conversion improvements.
+            </p>
+          </div>
+
+          <div class="panel reveal reveal-stagger-2">
+            <h3>Broader view</h3>
+            <p>
+              I look at traffic, offers, website flow and conversion together, not as disconnected tasks.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-intro">
+          <p class="eyebrow reveal">Selected work</p>
+          <h2 class="reveal reveal-stagger-1">A few examples of the kind of work I do.</h2>
+        </div>
+
+        <div class="case-grid">
+          <article class="case-card reveal reveal-stagger-1">
+            <p class="case-tag">Ecommerce growth</p>
+            <h3>Golf Skate Caddy</h3>
+            <p>
+              Paid media, Shopify improvements, product positioning and campaign support across Australia and the USA.
+            </p>
+            <a href="work.html" class="text-link">Read more</a>
+          </article>
+
+          <article class="case-card reveal reveal-stagger-2">
+            <p class="case-tag">Digital acquisition</p>
+            <h3>Fiik Electric Scooters</h3>
+            <p>
+              Performance marketing support, website improvement and broader ecommerce growth strategy.
+            </p>
+            <a href="work.html" class="text-link">Read more</a>
+          </article>
+
+          <article class="case-card reveal reveal-stagger-3">
+            <p class="case-tag">Strategy and execution</p>
+            <h3>Marketing Strategy & Digital Execution</h3>
+            <p>
+              Messaging, campaign planning, content direction and practical digital optimisation for businesses that need momentum.
+            </p>
+            <a href="work.html" class="text-link">Read more</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section cta-band">
+      <div class="container cta-band-wrap">
+        <div class="reveal">
+          <p class="eyebrow">Let’s make the site work harder</p>
+          <h2>Need a website, better campaigns or ongoing support?</h2>
+        </div>
+        <a href="contact.html" class="btn reveal reveal-stagger-1">Start a conversation</a>
+      </div>
+    </section>
+
+    <section class="client-logos">
+      <div class="container">
+        <p class="logos-title reveal">Selected brands and projects</p>
+
+        <div class="logos-grid">
+          <img class="reveal reveal-stagger-1" src="images/bondi-living.png" alt="Bondi Living">
+          <img class="reveal reveal-stagger-2" src="images/housekonsept.png" alt="House Konsept">
+          <img class="reveal reveal-stagger-3" src="images/invest-properties.png" alt="Invest In Properties">
+          <img class="reveal reveal-stagger-4" src="images/sniper.png" alt="Sniper">
+          <img class="reveal reveal-stagger-1" src="images/pando.png" alt="P&O Cruises">
+          <img class="reveal reveal-stagger-2" src="images/golfskatecaddy.png" alt="Golf Skate Caddy">
+          <img class="reveal reveal-stagger-3" src="images/laurenkress.png" alt="Lauren Kress">
+          <img class="reveal reveal-stagger-4" src="images/fiik.png" alt="Fiik Electric Scooters">
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-wrap">
+      <div>
+        <p class="footer-brand">Guy Hozavsky</p>
+        <p class="footer-copy">Growth marketing, ecommerce and practical digital strategy.</p>
+      </div>
+
+      <div class="footer-links">
+        <a href="services.html">Services</a>
+        <a href="work.html">Work</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="https://www.linkedin.com/in/guy-hozavsky" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
 
 .eyebrow {
   display: inline-block;
