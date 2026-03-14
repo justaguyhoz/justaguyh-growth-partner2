@@ -1435,3 +1435,25 @@ textarea:focus {
     margin-top: 10px;
   }
 }
+/* Hero image final size override */
+.hero-image img {
+  width: 100%;
+  max-width: 120px !important;
+  border-radius: 16px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
+@media (max-width: 760px) {
+  .hero-grid {
+    gap: 18px;
+  }
+
+  .hero-image {
+    justify-content: flex-start;
+  }
+
+  .hero-image img {
+    max-width: 88px !important;
+    width: 88px !important;
+  }
+}
