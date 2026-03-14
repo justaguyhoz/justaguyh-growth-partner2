@@ -453,27 +453,56 @@ img {
   color: #8fb2ff;
 }
 
-/* Testimonials */
+/* =========================
+   Testimonials Section
+========================= */
 
 .testimonials {
-  padding: 70px 0;
+  padding: 72px 0;
   background: #ffffff;
   text-align: center;
 }
+
+.section-label {
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 1px;
+  color: #777;
+  margin-bottom: 10px;
+}
+
+.section-title {
+  font-size: clamp(2rem, 4vw, 2.6rem);
+  margin-bottom: 44px;
+  letter-spacing: -0.5px;
+}
+
+/* =========================
+   Testimonials Grid
+========================= */
 
 .testimonial-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 26px;
+  align-items: stretch;
 }
+
+/* =========================
+   Testimonial Card
+========================= */
 
 .testimonial-card {
   background: #f6f7fb;
-  padding: 26px;
-  border-radius: 14px;
+  padding: 28px;
+  border-radius: 16px;
   text-align: left;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  border: 1px solid rgba(15, 23, 42, 0.04);
 }
 
 .testimonial-card:hover {
@@ -481,51 +510,119 @@ img {
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
 }
 
+/* =========================
+   Quote Text
+========================= */
+
 .testimonial-text {
   font-style: italic;
-  margin-bottom: 18px;
+  margin: 0 0 22px;
   color: #333;
-  line-height: 1.55;
+  line-height: 1.58;
   position: relative;
+  flex-grow: 1;
 }
 
 .testimonial-text::before {
   content: "“";
-  font-size: 46px;
+  font-size: 52px;
+  line-height: 1;
   position: absolute;
   left: -10px;
   top: -10px;
   opacity: 0.08;
 }
 
+/* =========================
+   Author Block
+========================= */
+
 .testimonial-author {
-  margin-bottom: 14px;
+  margin-top: auto;
+  margin-bottom: 10px;
+  padding-top: 2px;
 }
 
 .testimonial-author strong {
   display: block;
-  font-size: 1.05rem;
+  font-size: 1.04rem;
+  line-height: 1.2;
+  color: #0f172a;
 }
 
 .testimonial-author span {
+  display: block;
+  margin-top: 3px;
   font-size: 14px;
   color: #666;
+  line-height: 1.3;
 }
 
+/* =========================
+   Logo under testimonial
+========================= */
+
 .testimonial-card img {
-  height: 44px;
-  max-width: 180px;
+  display: block;
+  align-self: flex-start;
+  height: 60px;
   width: auto;
-  margin-top: 12px;
-  opacity: 0.75;
+  max-width: none;
+  margin-top: 8px;
+  opacity: 0.82;
   object-fit: contain;
   filter: grayscale(100%);
-  transition: opacity 0.2s ease, filter 0.2s ease;
+  transition: opacity 0.2s ease, filter 0.2s ease, transform 0.2s ease;
 }
 
 .testimonial-card img:hover {
   opacity: 1;
   filter: none;
+  transform: translateY(-1px);
+}
+
+/* =========================
+   Mobile Optimisation
+========================= */
+
+@media (max-width: 760px) {
+  .testimonials {
+    padding: 54px 0;
+  }
+
+  .section-title {
+    margin-bottom: 34px;
+  }
+
+  .testimonial-card {
+    padding: 22px;
+    border-radius: 14px;
+  }
+
+  .testimonial-text {
+    font-size: 0.95rem;
+    line-height: 1.52;
+    margin-bottom: 18px;
+  }
+
+  .testimonial-text::before {
+    font-size: 42px;
+    left: -8px;
+    top: -8px;
+  }
+
+  .testimonial-author strong {
+    font-size: 1rem;
+  }
+
+  .testimonial-author span {
+    font-size: 13px;
+  }
+
+  .testimonial-card img {
+    height: 48px;
+    margin-top: 8px;
+  }
 }
 
 /* Results */
