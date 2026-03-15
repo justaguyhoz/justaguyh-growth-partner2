@@ -176,17 +176,29 @@ img {
   gap: 10px;
 }
 
-.hero-points span {
-  padding: 6px 11px;
-  border: 1px solid rgba(255, 255, 255, 0.10);
-  border-radius: 999px;
-  color: rgba(255, 255, 255, 0.68);
-  font-size: 0.84rem;
-  font-weight: 500;
-  background: rgba(255, 255, 255, 0.02);
-  pointer-events: none;
+.hero-points {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 12px;
 }
 
+.hero-points span {
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  color: rgba(255, 255, 255, 0.62);
+  font-size: 0.83rem;
+  font-weight: 600;
+  background: transparent;
+  pointer-events: none;
+  position: relative;
+}
+
+.hero-points span:not(:last-child)::after {
+  content: "•";
+  margin-left: 12px;
+  color: rgba(255, 255, 255, 0.28);
+}
 /* Page hero */
 
 .page-main {
