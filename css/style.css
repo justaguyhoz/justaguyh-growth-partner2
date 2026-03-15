@@ -1193,6 +1193,14 @@ textarea:focus {
 }
 /* Services top tabs */
 
+.services-tabs-wrap {
+  position: sticky;
+  top: 76px;
+  z-index: 20;
+  background: #ffffff;
+  padding: 14px 0 10px;
+}
+
 .services-tabs-section {
   padding-top: 26px;
   padding-bottom: 10px;
