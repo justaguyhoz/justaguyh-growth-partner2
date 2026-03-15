@@ -4,560 +4,278 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Services | Guy Hozavsky</title>
-  <meta name="description" content="Growth marketing, paid media, Shopify optimisation, CRO and analytics support for businesses that want practical results." />
+  <meta
+    name="description"
+    content="Growth marketing, paid media, Shopify optimisation, CRO and analytics support for businesses that want practical results."
+  />
   <link rel="canonical" href="https://justaguyh.com/services.html" />
-
-  <style>
-    :root {
-      --bg: #f7f5ef;
-      --text: #1f1f1f;
-      --muted: #5f5f5f;
-      --line: #d9d4c7;
-      --card: #ffffff;
-      --accent: #1f1f1f;
-      --accent-hover: #333333;
-      --max-width: 1100px;
-      --radius: 14px;
-      --shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      color: var(--text);
-      background: var(--bg);
-      line-height: 1.6;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    .container {
-      width: min(92%, var(--max-width));
-      margin: 0 auto;
-    }
-
-    .site-header {
-      background: #fff;
-      border-bottom: 1px solid var(--line);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-
-    .header-inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-      min-height: 74px;
-    }
-
-    .brand {
-      font-size: 1.05rem;
-      font-weight: 700;
-      letter-spacing: 0.2px;
-    }
-
-    .site-nav {
-      display: flex;
-      align-items: center;
-      gap: 22px;
-      flex-wrap: wrap;
-    }
-
-    .site-nav a {
-      font-size: 0.96rem;
-      color: var(--muted);
-      transition: color 0.2s ease;
-    }
-
-    .site-nav a:hover,
-    .site-nav a.active {
-      color: var(--text);
-    }
-
-    .hero {
-      padding: 72px 0 40px;
-    }
-
-    .hero-inner {
-      max-width: 820px;
-    }
-
-    .eyebrow {
-      display: inline-block;
-      margin-bottom: 14px;
-      font-size: 0.84rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--muted);
-    }
-
-    h1 {
-      margin: 0 0 18px;
-      font-size: clamp(2.1rem, 4vw, 3.6rem);
-      line-height: 1.1;
-      letter-spacing: -0.02em;
-    }
-
-    .hero p {
-      margin: 0;
-      font-size: 1.08rem;
-      color: var(--muted);
-      max-width: 720px;
-    }
-
-    .services-section {
-      padding: 20px 0 80px;
-    }
-
-    .services-card {
-      background: var(--card);
-      border: 1px solid var(--line);
-      border-radius: 22px;
-      box-shadow: var(--shadow);
-      padding: 22px 26px;
-    }
-
-    .services-intro {
-      margin: 0 0 18px;
-      color: var(--muted);
-      font-size: 1rem;
-      max-width: 780px;
-    }
-
-    .service {
-      border-top: 1px solid var(--line);
-      padding: 24px 0;
-    }
-
-    .service:first-of-type {
-      border-top: 0;
-    }
-
-    .service-header {
-      display: flex;
-      align-items: flex-start;
-      justify-content: space-between;
-      gap: 16px;
-    }
-
-    .service-header h3 {
-      margin: 0;
-      font-size: 1.28rem;
-      line-height: 1.25;
-    }
-
-    .toggle-btn {
-      flex-shrink: 0;
-      background: transparent;
-      color: var(--text);
-      border: 1px solid var(--text);
-      padding: 10px 14px;
-      border-radius: 999px;
-      font-size: 0.92rem;
-      cursor: pointer;
-      transition: all 0.2s ease;
-    }
-
-    .toggle-btn:hover {
-      background: var(--accent);
-      color: #fff;
-      border-color: var(--accent);
-    }
-
-    .service-summary {
-      margin: 10px 0 0;
-      color: var(--muted);
-      max-width: 760px;
-    }
-
-    .service-details {
-      display: none;
-      margin-top: 18px;
-      color: var(--text);
-      animation: fadeDown 0.25s ease;
-    }
-
-    .service.open .service-details {
-      display: block;
-    }
-
-    .service-details p {
-      margin: 0 0 14px;
-    }
-
-    .service-details ul {
-      margin: 0 0 14px 18px;
-      padding: 0;
-    }
-
-    .service-details li {
-      margin-bottom: 8px;
-    }
-
-    .service-outcome {
-      margin-top: 8px;
-      font-weight: 700;
-    }
-
-    .services-cta {
-      padding: 0 0 90px;
-    }
-
-    .cta-box {
-      background: #fff;
-      border: 1px solid var(--line);
-      border-radius: 22px;
-      box-shadow: var(--shadow);
-      padding: 36px 30px;
-      text-align: center;
-    }
-
-    .cta-box h2 {
-      margin: 0 0 12px;
-      font-size: clamp(1.7rem, 3vw, 2.4rem);
-      line-height: 1.15;
-    }
-
-    .cta-box p {
-      margin: 0 auto 22px;
-      max-width: 680px;
-      color: var(--muted);
-    }
-
-    .cta-button {
-      display: inline-block;
-      background: var(--accent);
-      color: #fff;
-      padding: 14px 22px;
-      border-radius: 999px;
-      font-weight: 700;
-      transition: background 0.2s ease;
-    }
-
-    .cta-button:hover {
-      background: var(--accent-hover);
-    }
-
-    .site-footer {
-      border-top: 1px solid var(--line);
-      background: #fff;
-    }
-
-    .footer-inner {
-      padding: 26px 0;
-      display: flex;
-      justify-content: space-between;
-      gap: 16px;
-      flex-wrap: wrap;
-      color: var(--muted);
-      font-size: 0.94rem;
-    }
-
-    @keyframes fadeDown {
-      from {
-        opacity: 0;
-        transform: translateY(-6px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    @media (max-width: 768px) {
-      .header-inner {
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: center;
-        padding: 14px 0;
-      }
-
-      .site-nav {
-        gap: 14px;
-      }
-
-      .hero {
-        padding: 46px 0 24px;
-      }
-
-      .services-card {
-        padding: 18px 18px;
-      }
-
-      .service-header {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .toggle-btn {
-        margin-top: 6px;
-      }
-
-      .cta-box {
-        padding: 28px 20px;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="/css/style.css" />
 </head>
+
 <body>
-
   <header class="site-header">
-    <div class="container header-inner">
-      <a href="/" class="brand">Guy Hozavsky</a>
+    <div class="container nav-wrap">
+      <a href="index.html" class="brand">Guy Hozavsky</a>
 
-      <nav class="site-nav" aria-label="Main navigation">
-        <a href="/">Home</a>
-        <a href="/about.html">About</a>
-        <a href="/services.html" class="active">Services</a>
-        <a href="/contact.html">Contact</a>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="site-nav">
+        <a href="index.html">Home</a>
+        <a href="services.html" class="active">Services</a>
+        <a href="work.html">Work</a>
+        <a href="about.html">About</a>
+        <a href="contact.html" class="btn btn-outline btn-small">Contact</a>
       </nav>
     </div>
   </header>
 
-  <main>
-    <section class="hero">
-      <div class="container hero-inner">
-        <span class="eyebrow">Services</span>
+  <main class="page-main">
+    <section class="page-hero">
+      <div class="container narrow">
+        <p class="eyebrow">Services</p>
         <h1>Practical marketing support built around growth, not fluff.</h1>
-        <p>
+        <p class="lead">
           I help businesses improve strategy, sharpen execution and turn more traffic into revenue through paid media, Shopify optimisation, CRO and analytics.
         </p>
       </div>
     </section>
 
-    <section class="services-section">
-      <div class="container">
-        <div class="services-card">
-          <p class="services-intro">
-            Most businesses do not need another agency report. They need clear thinking, commercially focused execution and someone who understands how marketing actually impacts revenue.
-          </p>
+    <section class="section">
+      <div class="container narrow">
+        <div class="section-intro">
+          <p class="eyebrow">How I help</p>
+          <h2>Clear support for businesses that want measurable progress.</h2>
+        </div>
 
-          <div class="service">
-            <div class="service-header">
-              <h3>Growth Strategy</h3>
-              <button class="toggle-btn" type="button" aria-expanded="false">Show details</button>
-            </div>
+        <div class="service-accordion">
 
-            <p class="service-summary">
+          <article class="service-summary-card">
+            <h3>Growth Strategy</h3>
+            <p class="service-summary-text">
               If your marketing feels scattered, inconsistent or reactive, I help create a clearer roadmap for growth.
             </p>
 
-            <div class="service-details">
+            <ul class="service-mini-list">
+              <li>Growth strategy and roadmap development</li>
+              <li>Customer acquisition frameworks</li>
+              <li>Channel prioritisation and budget allocation</li>
+            </ul>
+
+            <p class="service-price"><strong>Best for:</strong> Businesses that need direction before spending more on marketing.</p>
+
+            <button class="service-toggle" type="button" aria-expanded="false">
+              Show full details
+            </button>
+
+            <div class="service-full-details">
               <p>
-                I work with founders and marketing teams to identify the channels, offers and customer journeys most likely to drive profitable growth.
-              </p>
-              <ul>
-                <li>Growth strategy and roadmap development</li>
-                <li>Customer acquisition frameworks</li>
-                <li>Channel prioritisation and budget allocation</li>
-                <li>Offer and messaging direction</li>
-                <li>Marketing KPI structure and reporting direction</li>
-              </ul>
-              <p class="service-outcome">
-                Outcome: Clear direction, smarter decisions and marketing activity tied to revenue.
+                I work with founders and marketing teams to identify the channels, offers and customer journeys most likely to drive profitable growth. The goal is to create clearer priorities, reduce wasted effort and connect activity to commercial outcomes.
               </p>
             </div>
-          </div>
+          </article>
 
-          <div class="service">
-            <div class="service-header">
-              <h3>Paid Media Management</h3>
-              <button class="toggle-btn" type="button" aria-expanded="false">Show details</button>
-            </div>
-
-            <p class="service-summary">
+          <article class="service-summary-card">
+            <h3>Paid Media Management</h3>
+            <p class="service-summary-text">
               Paid advertising should do more than generate clicks. It should bring in qualified leads and profitable customers.
             </p>
 
-            <div class="service-details">
+            <ul class="service-mini-list">
+              <li>Google Ads campaign builds and optimisation</li>
+              <li>Meta Ads strategy and campaign management</li>
+              <li>Creative testing and message refinement</li>
+            </ul>
+
+            <p class="service-price"><strong>Best for:</strong> Brands that want cleaner campaign structure, better performance and less wasted spend.</p>
+
+            <button class="service-toggle" type="button" aria-expanded="false">
+              Show full details
+            </button>
+
+            <div class="service-full-details">
               <p>
-                I help businesses build, optimise and scale paid campaigns across Google and Meta with a focus on efficiency and commercial results.
-              </p>
-              <ul>
-                <li>Google Ads campaign builds and optimisation</li>
-                <li>Meta Ads strategy and campaign management</li>
-                <li>Creative testing and message refinement</li>
-                <li>Budget allocation and performance reviews</li>
-                <li>Lead quality and acquisition cost improvement</li>
-                <li>Tracking and attribution support</li>
-              </ul>
-              <p class="service-outcome">
-                Outcome: Stronger campaign performance and lower wasted spend.
+                I help businesses build, optimise and scale paid campaigns across Google and Meta with a focus on efficiency and commercial results. That includes budget direction, campaign refinement, offer alignment, tracking support and ongoing performance review.
               </p>
             </div>
-          </div>
+          </article>
 
-          <div class="service">
-            <div class="service-header">
-              <h3>Conversion Rate Optimisation</h3>
-              <button class="toggle-btn" type="button" aria-expanded="false">Show details</button>
-            </div>
-
-            <p class="service-summary">
+          <article class="service-summary-card">
+            <h3>Conversion Rate Optimisation</h3>
+            <p class="service-summary-text">
               Most websites lose potential customers before conversion. CRO helps fix the leaks.
             </p>
 
-            <div class="service-details">
+            <ul class="service-mini-list">
+              <li>Landing page reviews and conversion improvements</li>
+              <li>Customer journey analysis</li>
+              <li>Offer positioning and messaging refinement</li>
+            </ul>
+
+            <p class="service-price"><strong>Best for:</strong> Businesses getting traffic but not enough enquiries or sales.</p>
+
+            <button class="service-toggle" type="button" aria-expanded="false">
+              Show full details
+            </button>
+
+            <div class="service-full-details">
               <p>
-                I review how people move through your website and identify the friction points, messaging gaps and UX issues that are hurting conversions.
-              </p>
-              <ul>
-                <li>Landing page reviews and conversion improvements</li>
-                <li>Customer journey analysis</li>
-                <li>Offer positioning and messaging refinement</li>
-                <li>Checkout and enquiry flow improvements</li>
-                <li>A/B testing ideas and prioritisation</li>
-              </ul>
-              <p class="service-outcome">
-                Outcome: More leads or sales from the traffic you already have.
+                I review how people move through your website and identify the friction points, messaging gaps and UX issues that are hurting conversions. The focus is on practical changes that improve lead volume or sales without necessarily increasing ad spend.
               </p>
             </div>
-          </div>
+          </article>
 
-          <div class="service">
-            <div class="service-header">
-              <h3>Shopify and E-commerce Optimisation</h3>
-              <button class="toggle-btn" type="button" aria-expanded="false">Show details</button>
-            </div>
-
-            <p class="service-summary">
+          <article class="service-summary-card">
+            <h3>Shopify and E-commerce Optimisation</h3>
+            <p class="service-summary-text">
               Small improvements to structure, product pages and UX can create a meaningful lift in e-commerce revenue.
             </p>
 
-            <div class="service-details">
+            <ul class="service-mini-list">
+              <li>Shopify store audits</li>
+              <li>Product page optimisation</li>
+              <li>Upsell and cross-sell opportunities</li>
+            </ul>
+
+            <p class="service-price"><strong>Best for:</strong> Shopify brands that want better conversion from existing traffic.</p>
+
+            <button class="service-toggle" type="button" aria-expanded="false">
+              Show full details
+            </button>
+
+            <div class="service-full-details">
               <p>
-                I help Shopify brands improve the parts of the site that influence trust, usability and conversion.
-              </p>
-              <ul>
-                <li>Shopify store audits</li>
-                <li>Product page optimisation</li>
-                <li>Theme and content UX improvements</li>
-                <li>Upsell and cross-sell opportunities</li>
-                <li>Email capture and retention touchpoints</li>
-                <li>Practical conversion-focused recommendations</li>
-              </ul>
-              <p class="service-outcome">
-                Outcome: Better site performance and stronger revenue per visitor.
+                I help Shopify brands improve the parts of the site that influence trust, usability and conversion. This can include storefront structure, product messaging, theme adjustments, content layout and practical recommendations to increase revenue per visitor.
               </p>
             </div>
-          </div>
+          </article>
 
-          <div class="service">
-            <div class="service-header">
-              <h3>Analytics and Tracking</h3>
-              <button class="toggle-btn" type="button" aria-expanded="false">Show details</button>
-            </div>
-
-            <p class="service-summary">
+          <article class="service-summary-card">
+            <h3>Analytics and Tracking</h3>
+            <p class="service-summary-text">
               Good marketing decisions depend on accurate tracking and reliable data.
             </p>
 
-            <div class="service-details">
+            <ul class="service-mini-list">
+              <li>GA4 setup and configuration support</li>
+              <li>Conversion tracking fixes</li>
+              <li>Google Tag Manager implementation support</li>
+            </ul>
+
+            <p class="service-price"><strong>Best for:</strong> Businesses that do not fully trust their numbers or reporting.</p>
+
+            <button class="service-toggle" type="button" aria-expanded="false">
+              Show full details
+            </button>
+
+            <div class="service-full-details">
               <p>
-                I help businesses clean up tracking issues so performance can be measured properly and decisions can be made with more confidence.
-              </p>
-              <ul>
-                <li>GA4 setup and configuration support</li>
-                <li>Conversion tracking fixes</li>
-                <li>Meta Pixel and CAPI guidance</li>
-                <li>Google Tag Manager implementation support</li>
-                <li>Reporting structure and dashboard direction</li>
-              </ul>
-              <p class="service-outcome">
-                Outcome: Better visibility, cleaner data and more confident optimisation.
+                I help businesses clean up tracking issues so performance can be measured properly and decisions can be made with more confidence. That includes conversion tracking, analytics structure, attribution checks and a clearer reporting setup.
               </p>
             </div>
-          </div>
+          </article>
 
-          <div class="service">
-            <div class="service-header">
-              <h3>Marketing Audits</h3>
-              <button class="toggle-btn" type="button" aria-expanded="false">Show details</button>
-            </div>
-
-            <p class="service-summary">
+          <article class="service-summary-card">
+            <h3>Marketing Audits</h3>
+            <p class="service-summary-text">
               Sometimes the fastest wins come from reviewing what is already there and spotting what is underperforming.
             </p>
 
-            <div class="service-details">
+            <ul class="service-mini-list">
+              <li>Paid media account review</li>
+              <li>Website and funnel analysis</li>
+              <li>SEO and content opportunity review</li>
+            </ul>
+
+            <p class="service-price"><strong>Best for:</strong> Businesses that want a clearer action plan before committing to bigger changes.</p>
+
+            <button class="service-toggle" type="button" aria-expanded="false">
+              Show full details
+            </button>
+
+            <div class="service-full-details">
               <p>
-                I review your marketing setup across channels, messaging, site structure and tracking to identify practical improvements.
-              </p>
-              <ul>
-                <li>Paid media account review</li>
-                <li>Website and funnel analysis</li>
-                <li>SEO and content opportunity review</li>
-                <li>Competitor and positioning review</li>
-                <li>Clear action plan with prioritised next steps</li>
-              </ul>
-              <p class="service-outcome">
-                Outcome: A clearer path to stronger performance without guesswork.
+                I review your marketing setup across channels, messaging, site structure and tracking to identify practical improvements. The result is a clearer view of what is working, what is underperforming and what should be prioritised next.
               </p>
             </div>
-          </div>
+          </article>
 
         </div>
       </div>
     </section>
 
-    <section class="services-cta">
-      <div class="container">
-        <div class="cta-box">
+    <section class="section section-alt">
+      <div class="container narrow">
+        <div class="contact-panel contact-panel-simple">
           <h2>Need help turning your marketing into measurable growth?</h2>
           <p>
             If you want practical support across strategy, paid media, Shopify or conversion improvement, get in touch and let’s see if there’s a fit.
           </p>
-          <a href="/contact.html" class="cta-button">Start a Conversation</a>
+
+          <div class="contact-actions">
+            <a href="contact.html" class="btn">Start a conversation</a>
+          </div>
         </div>
+      </div>
+    </section>
+
+    <section class="section cta-band">
+      <div class="container cta-band-wrap">
+        <div>
+          <p class="eyebrow">Need something specific?</p>
+          <h2>Not every project needs a full rebuild or long retainer.</h2>
+          <p>
+            Some businesses need campaign setup. Others need a sharper website, better tracking or a practical outside perspective.
+          </p>
+        </div>
+        <a href="contact.html" class="btn">Get in touch</a>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container footer-inner">
-      <div>© 2026 Guy Hozavsky</div>
-      <div>Growth marketing, paid media and e-commerce consulting</div>
+    <div class="container footer-wrap">
+      <div>
+        <p class="footer-brand">Guy Hozavsky</p>
+        <p class="footer-copy">Growth marketing, ecommerce and practical digital strategy.</p>
+      </div>
+
+      <div class="footer-links">
+        <a href="services.html">Services</a>
+        <a href="work.html">Work</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="https://www.linkedin.com/in/guy-hozavsky" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
     </div>
   </footer>
 
+  <script src="js/script.js"></script>
   <script>
-    const serviceButtons = document.querySelectorAll(".toggle-btn");
-
-    serviceButtons.forEach((button) => {
+    document.querySelectorAll(".service-toggle").forEach((button) => {
       button.addEventListener("click", function () {
-        const service = this.closest(".service");
-        const isOpen = service.classList.contains("open");
+        const details = this.nextElementSibling;
+        const isOpen = details.classList.contains("open");
 
-        document.querySelectorAll(".service").forEach((item) => {
+        document.querySelectorAll(".service-full-details").forEach((item) => {
           item.classList.remove("open");
-          const itemButton = item.querySelector(".toggle-btn");
-          if (itemButton) {
-            itemButton.textContent = "Show details";
-            itemButton.setAttribute("aria-expanded", "false");
-          }
+        });
+
+        document.querySelectorAll(".service-toggle").forEach((item) => {
+          item.textContent = "Show full details";
+          item.setAttribute("aria-expanded", "false");
         });
 
         if (!isOpen) {
-          service.classList.add("open");
-          this.textContent = "Hide details";
+          details.classList.add("open");
+          this.textContent = "Hide full details";
           this.setAttribute("aria-expanded", "true");
         }
       });
     });
   </script>
-
 </body>
 </html>
