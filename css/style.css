@@ -91,3 +91,94 @@
     font-size: 0.98rem;
   }
 }
+/* Lean services accordion */
+
+.service-accordion-simple {
+  display: grid;
+  gap: 18px;
+}
+
+.service-summary-card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+  padding: 24px;
+}
+
+.service-summary-card h3 {
+  margin: 0 0 10px;
+  font-size: clamp(1.45rem, 3vw, 1.9rem);
+  line-height: 1.15;
+  color: var(--text);
+}
+
+.service-summary-text {
+  margin: 0 0 14px;
+  color: var(--text-light);
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.service-mini-list {
+  margin: 12px 0 14px;
+  padding-left: 20px;
+  color: var(--text);
+}
+
+.service-mini-list li {
+  margin-bottom: 8px;
+}
+
+.service-fit,
+.service-price {
+  margin: 0 0 10px;
+  color: var(--text-light);
+}
+
+.service-price strong {
+  color: var(--accent);
+}
+
+.service-toggle {
+  background: transparent;
+  border: 0;
+  padding: 0;
+  color: var(--accent);
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.service-toggle:hover {
+  text-decoration: underline;
+}
+
+.service-full-details {
+  display: none;
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+}
+
+.service-full-details.open {
+  display: block;
+}
+
+.service-full-details p {
+  line-height: 1.5;
+}
+
+@media (max-width: 760px) {
+  .service-summary-card {
+    padding: 20px;
+  }
+
+  .service-summary-card h3 {
+    font-size: 1.25rem;
+  }
+
+  .service-summary-text {
+    font-size: 0.96rem;
+  }
+}
