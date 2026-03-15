@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <header id="top" class="site-header">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Services | Guy Hozavsky</title>
@@ -11,11 +10,236 @@
   />
   <link rel="canonical" href="https://justaguyh.com/services.html" />
   <link rel="stylesheet" href="/css/style.css" />
+
+  <style>
+    .services-page .page-hero .lead {
+      max-width: 760px;
+    }
+
+    .services-page .services-tabs-outer {
+      position: sticky;
+      top: 76px;
+      z-index: 30;
+      background: #ffffff;
+      border-bottom: 1px solid var(--line);
+      padding: 12px 0;
+    }
+
+    .services-page .services-tabs {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .services-page .services-tab {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 42px;
+      padding: 10px 14px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      box-shadow: 0 8px 20px rgba(15, 23, 42, 0.06);
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--text);
+      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+      white-space: nowrap;
+    }
+
+    .services-page .services-tab:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 14px 30px rgba(15, 23, 42, 0.08);
+      border-color: rgba(29, 78, 216, 0.28);
+    }
+
+    .services-page .offers-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .services-page .offer-card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .services-page .offer-card summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 26px;
+    }
+
+    .services-page .offer-card summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .services-page .offer-card summary .case-tag {
+      margin-bottom: 10px;
+    }
+
+    .services-page .offer-card h3 {
+      margin: 0 0 14px;
+      font-size: 1.9rem;
+      line-height: 1.15;
+      color: var(--text);
+    }
+
+    .services-page .offer-top-meta {
+      display: grid;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+
+    .services-page .offer-meta-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 12px 14px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: var(--panel-soft);
+    }
+
+    .services-page .offer-meta-label {
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .services-page .offer-meta-value {
+      font-weight: 700;
+      color: var(--accent);
+      text-align: right;
+      white-space: nowrap;
+    }
+
+    .services-page .offer-one-line {
+      margin: 0 0 12px;
+      color: var(--text-light);
+      font-size: 1rem;
+      line-height: 1.55;
+    }
+
+    .services-page .offer-expand {
+      color: var(--accent);
+      font-weight: 700;
+      display: inline-block;
+      margin-top: 6px;
+    }
+
+    .services-page .offer-card[open] .offer-expand {
+      display: none;
+    }
+
+    .services-page .offer-details {
+      padding: 0 26px 26px;
+      border-top: 1px solid var(--line);
+      margin-top: 0;
+    }
+
+    .services-page .offer-details-inner {
+      padding-top: 18px;
+    }
+
+    .services-page .offer-details ul {
+      margin: 0 0 18px;
+      padding-left: 20px;
+    }
+
+    .services-page .offer-details li {
+      margin-bottom: 8px;
+      color: var(--text);
+    }
+
+    .services-page .offer-best-for {
+      margin: 0;
+      color: var(--text-light);
+      line-height: 1.55;
+    }
+
+    .services-page .section-note {
+      max-width: 760px;
+      margin: 22px auto 0;
+      text-align: center;
+    }
+
+    .services-page .section-note p {
+      margin: 0;
+      color: var(--text-light);
+    }
+
+    .services-page .back-to-top-wrap {
+      margin-top: 28px;
+      text-align: center;
+    }
+
+    .services-page .back-to-top-link {
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    .services-page .back-to-top-link:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 980px) {
+      .services-page .offers-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .services-page .services-tabs-outer {
+        padding: 10px 0;
+      }
+
+      .services-page .services-tabs {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        padding-bottom: 4px;
+      }
+
+      .services-page .services-tabs::-webkit-scrollbar {
+        display: none;
+      }
+
+      .services-page .services-tab {
+        flex: 0 0 auto;
+        min-height: 40px;
+        font-size: 0.9rem;
+      }
+
+      .services-page .offer-card summary {
+        padding: 22px;
+      }
+
+      .services-page .offer-card h3 {
+        font-size: 1.45rem;
+      }
+
+      .services-page .offer-details {
+        padding: 0 22px 22px;
+      }
+
+      .services-page .offer-one-line {
+        font-size: 0.96rem;
+      }
+
+      .services-page .offer-meta-row {
+        padding: 11px 12px;
+      }
+    }
+  </style>
 </head>
 
-<body>
-  <body id="top">
-    <body class="services-page">
+<body class="services-page" id="top">
   <header class="site-header">
     <div class="container nav-wrap">
       <a href="index.html" class="brand">Guy Hozavsky</a>
@@ -47,17 +271,17 @@
       </div>
     </section>
 
-<section class="services-tabs-section">
-  <div class="services-tabs-outer">
-    <div class="container narrow">
-      <div class="services-tabs">
-        <a href="#websites" class="services-tab">Websites</a>
-        <a href="#shopify" class="services-tab">Shopify</a>
-        <a href="#paid-ads" class="services-tab">Paid Ads</a>
+    <section class="services-tabs-section">
+      <div class="services-tabs-outer">
+        <div class="container">
+          <div class="services-tabs">
+            <a href="#websites" class="services-tab">Websites</a>
+            <a href="#shopify" class="services-tab">Shopify</a>
+            <a href="#paid-ads" class="services-tab">Paid Ads</a>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
     <section class="section">
       <div class="container narrow">
@@ -81,96 +305,124 @@
           </p>
         </div>
 
-        <div class="package-category-grid">
-          <article class="package-category-card">
-            <p class="case-tag">Starter</p>
-            <h3>Starter Website</h3>
-            <p class="package-category-text">
-              A clean, professional website for businesses that need a solid online presence without overcomplicating the build.
-            </p>
+        <div class="offers-grid">
+          <details class="offer-card">
+            <summary>
+              <p class="case-tag">Starter</p>
+              <h3>Starter Website</h3>
 
-            <div class="package-tier-list">
-              <div class="package-tier-row">
-                <span class="tier-name">Price</span>
-                <span class="tier-price">From $1,200</span>
+              <div class="offer-top-meta">
+                <div class="offer-meta-row">
+                  <span class="offer-meta-label">Price</span>
+                  <span class="offer-meta-value">From $1,200</span>
+                </div>
+                <div class="offer-meta-row">
+                  <span class="offer-meta-label">Delivery</span>
+                  <span class="offer-meta-value">1-2 weeks</span>
+                </div>
               </div>
-              <div class="package-tier-row">
-                <span class="tier-name">Timeline</span>
-                <span class="tier-price">1-2 weeks</span>
-              </div>
-            </div>
 
-            <ul class="service-mini-list">
-              <li>Wix, Squarespace or simple CMS build</li>
-              <li>Up to 4 pages</li>
-              <li>Mobile optimisation</li>
-              <li>Contact form setup</li>
-              <li>Basic SEO structure</li>
-              <li>Launch support</li>
-            </ul>
+              <p class="offer-one-line">
+                A clean, professional website for businesses that need a solid online presence without overcomplicating the build.
+              </p>
 
-            <p class="service-price"><strong>Best for:</strong> Businesses that want to get online quickly with a professional foundation.</p>
-          </article>
+              <span class="offer-expand">View full package</span>
+            </summary>
 
-          <article class="package-category-card">
-            <p class="case-tag">Growth</p>
-            <h3>Growth Website</h3>
-            <p class="package-category-text">
-              A stronger, more conversion-focused business website with improved structure, messaging and lead flow.
-            </p>
-
-            <div class="package-tier-list">
-              <div class="package-tier-row">
-                <span class="tier-name">Price</span>
-                <span class="tier-price">From $1,900</span>
-              </div>
-              <div class="package-tier-row">
-                <span class="tier-name">Timeline</span>
-                <span class="tier-price">2-3 weeks</span>
+            <div class="offer-details">
+              <div class="offer-details-inner">
+                <ul>
+                  <li>Wix, Squarespace or simple CMS build</li>
+                  <li>Up to 4 pages</li>
+                  <li>Mobile optimisation</li>
+                  <li>Contact form setup</li>
+                  <li>Basic SEO structure</li>
+                  <li>Launch support</li>
+                </ul>
+                <p class="offer-best-for"><strong>Best for:</strong> Businesses that want to get online quickly with a professional foundation.</p>
               </div>
             </div>
+          </details>
 
-            <ul class="service-mini-list">
-              <li>Everything in Starter</li>
-              <li>Up to 8 pages</li>
-              <li>Improved conversion structure</li>
-              <li>Messaging optimisation</li>
-              <li>Lead capture setup</li>
-              <li>Analytics and conversion tracking</li>
-            </ul>
+          <details class="offer-card">
+            <summary>
+              <p class="case-tag">Growth</p>
+              <h3>Growth Website</h3>
 
-            <p class="service-price"><strong>Best for:</strong> Businesses that want a better-performing site, not just a nicer-looking one.</p>
-          </article>
-
-          <article class="package-category-card">
-            <p class="case-tag">Pro</p>
-            <h3>Pro Website</h3>
-            <p class="package-category-text">
-              A more complete marketing-ready website with stronger structure, landing page support and deeper performance thinking.
-            </p>
-
-            <div class="package-tier-list">
-              <div class="package-tier-row">
-                <span class="tier-name">Price</span>
-                <span class="tier-price">From $2,900</span>
+              <div class="offer-top-meta">
+                <div class="offer-meta-row">
+                  <span class="offer-meta-label">Price</span>
+                  <span class="offer-meta-value">From $1,900</span>
+                </div>
+                <div class="offer-meta-row">
+                  <span class="offer-meta-label">Delivery</span>
+                  <span class="offer-meta-value">2-3 weeks</span>
+                </div>
               </div>
-              <div class="package-tier-row">
-                <span class="tier-name">Timeline</span>
-                <span class="tier-price">3-4 weeks</span>
+
+              <p class="offer-one-line">
+                A stronger, more conversion-focused business website with improved structure, messaging and lead flow.
+              </p>
+
+              <span class="offer-expand">View full package</span>
+            </summary>
+
+            <div class="offer-details">
+              <div class="offer-details-inner">
+                <ul>
+                  <li>Everything in Starter</li>
+                  <li>Up to 8 pages</li>
+                  <li>Improved conversion structure</li>
+                  <li>Messaging optimisation</li>
+                  <li>Lead capture setup</li>
+                  <li>Analytics and conversion tracking</li>
+                </ul>
+                <p class="offer-best-for"><strong>Best for:</strong> Businesses that want a better-performing site, not just a nicer-looking one.</p>
               </div>
             </div>
+          </details>
 
-            <ul class="service-mini-list">
-              <li>Everything in Growth</li>
-              <li>Landing page for ads or lead generation</li>
-              <li>Deeper conversion optimisation</li>
-              <li>SEO foundation setup</li>
-              <li>Speed and UX improvements</li>
-              <li>Analytics dashboard direction</li>
-            </ul>
+          <details class="offer-card">
+            <summary>
+              <p class="case-tag">Pro</p>
+              <h3>Pro Website</h3>
 
-            <p class="service-price"><strong>Best for:</strong> Businesses that want their website to support real growth, not just exist online.</p>
-          </article>
+              <div class="offer-top-meta">
+                <div class="offer-meta-row">
+                  <span class="offer-meta-label">Price</span>
+                  <span class="offer-meta-value">From $2,900</span>
+                </div>
+                <div class="offer-meta-row">
+                  <span class="offer-meta-label">Delivery</span>
+                  <span class="offer-meta-value">3-4 weeks</span>
+                </div>
+              </div>
+
+              <p class="offer-one-line">
+                A more complete marketing-ready website with stronger structure, landing page support and deeper performance thinking.
+              </p>
+
+              <span class="offer-expand">View full package</span>
+            </summary>
+
+            <div class="offer-details">
+              <div class="offer-details-inner">
+                <ul>
+                  <li>Everything in Growth</li>
+                  <li>Landing page for ads or lead generation</li>
+                  <li>Deeper conversion optimisation</li>
+                  <li>SEO foundation setup</li>
+                  <li>Speed and UX improvements</li>
+                  <li>Analytics dashboard direction</li>
+                </ul>
+                <p class="offer-best-for"><strong>Best for:</strong> Businesses that want their website to support real growth, not just exist online.</p>
+              </div>
+            </div>
+          </details>
+        </div>
+
+        <div class="back-to-top-wrap">
+          <a href="#top" class="back-to-top-link">Back to top</a>
         </div>
       </div>
     </section>
@@ -185,96 +437,124 @@
           </p>
         </div>
 
-        <div class="package-category-grid">
-          <article class="package-category-card">
-            <p class="case-tag">Starter</p>
-            <h3>Starter Shopify Optimisation</h3>
-            <p class="package-category-text">
-              A focused improvement package for stores that already exist but need sharper structure and better conversion basics.
-            </p>
+        <div class="offers-grid">
+          <details class="offer-card">
+            <summary>
+              <p class="case-tag">Starter</p>
+              <h3>Starter Shopify Optimisation</h3>
 
-            <div class="package-tier-list">
-              <div class="package-tier-row">
-                <span class="tier-name">Price</span>
-                <span class="tier-price">From $1,500</span>
+              <div class="offer-top-meta">
+                <div class="offer-meta-row">
+                  <span class="offer-meta-label">Price</span>
+                  <span class="offer-meta-value">From $1,500</span>
+                </div>
+                <div class="offer-meta-row">
+                  <span class="offer-meta-label">Delivery</span>
+                  <span class="offer-meta-value">1-2 weeks</span>
+                </div>
               </div>
-              <div class="package-tier-row">
-                <span class="tier-name">Timeline</span>
-                <span class="tier-price">1-2 weeks</span>
-              </div>
-            </div>
 
-            <ul class="service-mini-list">
-              <li>Shopify audit</li>
-              <li>Product page improvements</li>
-              <li>Collection page clean-up</li>
-              <li>UX improvements</li>
-              <li>Conversion fixes</li>
-              <li>Practical action list</li>
-            </ul>
+              <p class="offer-one-line">
+                Focused improvements for stores that already exist but need sharper structure and better conversion basics.
+              </p>
 
-            <p class="service-price"><strong>Best for:</strong> Stores that need meaningful improvements without a full rebuild.</p>
-          </article>
+              <span class="offer-expand">View full package</span>
+            </summary>
 
-          <article class="package-category-card">
-            <p class="case-tag">Growth</p>
-            <h3>Growth Shopify Build / Rebuild</h3>
-            <p class="package-category-text">
-              A stronger Shopify setup or rebuild focused on structure, product presentation and conversion.
-            </p>
-
-            <div class="package-tier-list">
-              <div class="package-tier-row">
-                <span class="tier-name">Price</span>
-                <span class="tier-price">From $2,300</span>
-              </div>
-              <div class="package-tier-row">
-                <span class="tier-name">Timeline</span>
-                <span class="tier-price">2-3 weeks</span>
+            <div class="offer-details">
+              <div class="offer-details-inner">
+                <ul>
+                  <li>Shopify audit</li>
+                  <li>Product page improvements</li>
+                  <li>Collection page clean-up</li>
+                  <li>UX improvements</li>
+                  <li>Conversion fixes</li>
+                  <li>Practical action list</li>
+                </ul>
+                <p class="offer-best-for"><strong>Best for:</strong> Stores that need meaningful improvements without a full rebuild.</p>
               </div>
             </div>
+          </details>
 
-            <ul class="service-mini-list">
-              <li>Shopify setup or rebuild</li>
-              <li>Storefront structure</li>
-              <li>Product page optimisation</li>
-              <li>Collection setup</li>
-              <li>Checkout flow improvements</li>
-              <li>Conversion-focused layout refinements</li>
-            </ul>
+          <details class="offer-card">
+            <summary>
+              <p class="case-tag">Growth</p>
+              <h3>Growth Shopify Build / Rebuild</h3>
 
-            <p class="service-price"><strong>Best for:</strong> Brands launching properly or improving a store that is underperforming.</p>
-          </article>
-
-          <article class="package-category-card">
-            <p class="case-tag">Pro</p>
-            <h3>Pro Shopify Conversion Build</h3>
-            <p class="package-category-text">
-              A more complete Shopify build or rebuild with stronger marketing and conversion support built in.
-            </p>
-
-            <div class="package-tier-list">
-              <div class="package-tier-row">
-                <span class="tier-name">Price</span>
-                <span class="tier-price">From $3,400</span>
+              <div class="offer-top-meta">
+                <div class="offer-meta-row">
+                  <span class="offer-meta-label">Price</span>
+                  <span class="offer-meta-value">From $2,300</span>
+                </div>
+                <div class="offer-meta-row">
+                  <span class="offer-meta-label">Delivery</span>
+                  <span class="offer-meta-value">2-3 weeks</span>
+                </div>
               </div>
-              <div class="package-tier-row">
-                <span class="tier-name">Timeline</span>
-                <span class="tier-price">3-4 weeks</span>
+
+              <p class="offer-one-line">
+                A stronger Shopify setup or rebuild focused on structure, product presentation and conversion.
+              </p>
+
+              <span class="offer-expand">View full package</span>
+            </summary>
+
+            <div class="offer-details">
+              <div class="offer-details-inner">
+                <ul>
+                  <li>Shopify setup or rebuild</li>
+                  <li>Storefront structure</li>
+                  <li>Product page optimisation</li>
+                  <li>Collection setup</li>
+                  <li>Checkout flow improvements</li>
+                  <li>Conversion-focused layout refinements</li>
+                </ul>
+                <p class="offer-best-for"><strong>Best for:</strong> Brands launching properly or improving a store that is underperforming.</p>
               </div>
             </div>
+          </details>
 
-            <ul class="service-mini-list">
-              <li>Everything in Growth</li>
-              <li>Deeper CRO structure</li>
-              <li>Upsell and cross-sell setup</li>
-              <li>Email capture improvements</li>
-              <li>Analytics and tracking support</li>
-              <li>Broader conversion recommendations</li>
-            </ul>
+          <details class="offer-card">
+            <summary>
+              <p class="case-tag">Pro</p>
+              <h3>Pro Shopify Conversion Build</h3>
 
-            <p class="service-price"><strong>Best for:</strong> Brands that want a Shopify store built to support growth, not just transactions.</p>
-          </article>
+              <div class="offer-top-meta">
+                <div class="offer-meta-row">
+                  <span class="offer-meta-label">Price</span>
+                  <span class="offer-meta-value">From $3,400</span>
+                </div>
+                <div class="offer-meta-row">
+                  <span class="offer-meta-label">Delivery</span>
+                  <span class="offer-meta-value">3-4 weeks</span>
+                </div>
+              </div>
+
+              <p class="offer-one-line">
+                A more complete Shopify build or rebuild with stronger marketing and conversion support built in.
+              </p>
+
+              <span class="offer-expand">View full package</span>
+            </summary>
+
+            <div class="offer-details">
+              <div class="offer-details-inner">
+                <ul>
+                  <li>Everything in Growth</li>
+                  <li>Deeper CRO structure</li>
+                  <li>Upsell and cross-sell setup</li>
+                  <li>Email capture improvements</li>
+                  <li>Analytics and tracking support</li>
+                  <li>Broader conversion recommendations</li>
+                </ul>
+                <p class="offer-best-for"><strong>Best for:</strong> Brands that want a Shopify store built to support growth, not just transactions.</p>
+              </div>
+            </div>
+          </details>
+        </div>
+
+        <div class="back-to-top-wrap">
+          <a href="#top" class="back-to-top-link">Back to top</a>
         </div>
       </div>
     </section>
@@ -289,102 +569,130 @@
           </p>
         </div>
 
-        <div class="package-category-grid">
-          <article class="package-category-card">
-            <p class="case-tag">Starter</p>
-            <h3>Starter Campaign Setup</h3>
-            <p class="package-category-text">
-              A clean campaign setup package for businesses launching Google Ads or Meta Ads properly from the start.
-            </p>
+        <div class="offers-grid">
+          <details class="offer-card">
+            <summary>
+              <p class="case-tag">Starter</p>
+              <h3>Starter Campaign Setup</h3>
 
-            <div class="package-tier-list">
-              <div class="package-tier-row">
-                <span class="tier-name">Price</span>
-                <span class="tier-price">From $700</span>
+              <div class="offer-top-meta">
+                <div class="offer-meta-row">
+                  <span class="offer-meta-label">Price</span>
+                  <span class="offer-meta-value">From $700</span>
+                </div>
+                <div class="offer-meta-row">
+                  <span class="offer-meta-label">Delivery</span>
+                  <span class="offer-meta-value">5-7 days</span>
+                </div>
               </div>
-              <div class="package-tier-row">
-                <span class="tier-name">Timeline</span>
-                <span class="tier-price">5-7 days</span>
-              </div>
-            </div>
 
-            <ul class="service-mini-list">
-              <li>Google Ads or Meta Ads setup</li>
-              <li>Campaign structure</li>
-              <li>Keyword or audience research</li>
-              <li>Tracking support</li>
-              <li>Launch guidance</li>
-              <li>Basic performance review</li>
-            </ul>
+              <p class="offer-one-line">
+                A clean campaign setup package for businesses launching Google Ads or Meta Ads properly from the start.
+              </p>
 
-            <p class="service-price"><strong>Best for:</strong> Businesses that need a proper paid media starting point without a long commitment.</p>
-          </article>
+              <span class="offer-expand">View full package</span>
+            </summary>
 
-          <article class="package-category-card">
-            <p class="case-tag">Growth</p>
-            <h3>Growth Setup + Optimisation</h3>
-            <p class="package-category-text">
-              Campaign setup plus an initial optimisation phase to improve structure, performance and decision-making.
-            </p>
-
-            <div class="package-tier-list">
-              <div class="package-tier-row">
-                <span class="tier-name">Price</span>
-                <span class="tier-price">From $1,100</span>
-              </div>
-              <div class="package-tier-row">
-                <span class="tier-name">Timeline</span>
-                <span class="tier-price">2-3 weeks</span>
+            <div class="offer-details">
+              <div class="offer-details-inner">
+                <ul>
+                  <li>Google Ads or Meta Ads setup</li>
+                  <li>Campaign structure</li>
+                  <li>Keyword or audience research</li>
+                  <li>Tracking support</li>
+                  <li>Launch guidance</li>
+                  <li>Basic performance review</li>
+                </ul>
+                <p class="offer-best-for"><strong>Best for:</strong> Businesses that need a proper paid media starting point without a long commitment.</p>
               </div>
             </div>
+          </details>
 
-            <ul class="service-mini-list">
-              <li>Campaign build</li>
-              <li>Tracking setup</li>
-              <li>Initial optimisation period</li>
-              <li>Creative or messaging direction</li>
-              <li>Conversion review</li>
-              <li>Performance recommendations</li>
-            </ul>
+          <details class="offer-card">
+            <summary>
+              <p class="case-tag">Growth</p>
+              <h3>Growth Setup + Optimisation</h3>
 
-            <p class="service-price"><strong>Best for:</strong> Businesses that want more than setup and need early optimisation support too.</p>
-          </article>
-
-          <article class="package-category-card">
-            <p class="case-tag">Pro</p>
-            <h3>Pro Ongoing Campaign Management</h3>
-            <p class="package-category-text">
-              Ongoing management and optimisation for brands that want paid ads actively improved over time.
-            </p>
-
-            <div class="package-tier-list">
-              <div class="package-tier-row">
-                <span class="tier-name">Price</span>
-                <span class="tier-price">From $1,200/mo</span>
+              <div class="offer-top-meta">
+                <div class="offer-meta-row">
+                  <span class="offer-meta-label">Price</span>
+                  <span class="offer-meta-value">From $1,100</span>
+                </div>
+                <div class="offer-meta-row">
+                  <span class="offer-meta-label">Delivery</span>
+                  <span class="offer-meta-value">2-3 weeks</span>
+                </div>
               </div>
-              <div class="package-tier-row">
-                <span class="tier-name">Timeline</span>
-                <span class="tier-price">Ongoing</span>
+
+              <p class="offer-one-line">
+                Campaign setup plus an initial optimisation phase to improve structure, performance and decision-making.
+              </p>
+
+              <span class="offer-expand">View full package</span>
+            </summary>
+
+            <div class="offer-details">
+              <div class="offer-details-inner">
+                <ul>
+                  <li>Campaign build</li>
+                  <li>Tracking setup</li>
+                  <li>Initial optimisation period</li>
+                  <li>Creative or messaging direction</li>
+                  <li>Conversion review</li>
+                  <li>Performance recommendations</li>
+                </ul>
+                <p class="offer-best-for"><strong>Best for:</strong> Businesses that want more than setup and need early optimisation support too.</p>
               </div>
             </div>
+          </details>
 
-            <ul class="service-mini-list">
-              <li>Ongoing campaign management</li>
-              <li>Performance optimisation</li>
-              <li>Reporting and analysis</li>
-              <li>Budget guidance</li>
-              <li>Creative and offer feedback</li>
-              <li>Ongoing strategic direction</li>
-            </ul>
+          <details class="offer-card">
+            <summary>
+              <p class="case-tag">Pro</p>
+              <h3>Pro Ongoing Campaign Management</h3>
 
-            <p class="service-price"><strong>Best for:</strong> Businesses that want a hands-on paid media partner, not just setup help.</p>
-          </article>
+              <div class="offer-top-meta">
+                <div class="offer-meta-row">
+                  <span class="offer-meta-label">Price</span>
+                  <span class="offer-meta-value">From $1,200/mo</span>
+                </div>
+                <div class="offer-meta-row">
+                  <span class="offer-meta-label">Delivery</span>
+                  <span class="offer-meta-value">Ongoing</span>
+                </div>
+              </div>
+
+              <p class="offer-one-line">
+                Ongoing management and optimisation for brands that want paid ads actively improved over time.
+              </p>
+
+              <span class="offer-expand">View full package</span>
+            </summary>
+
+            <div class="offer-details">
+              <div class="offer-details-inner">
+                <ul>
+                  <li>Ongoing campaign management</li>
+                  <li>Performance optimisation</li>
+                  <li>Reporting and analysis</li>
+                  <li>Budget guidance</li>
+                  <li>Creative and offer feedback</li>
+                  <li>Ongoing strategic direction</li>
+                </ul>
+                <p class="offer-best-for"><strong>Best for:</strong> Businesses that want a hands-on paid media partner, not just setup help.</p>
+              </div>
+            </div>
+          </details>
         </div>
 
-        <div class="service-ai-note">
+        <div class="section-note">
           <p>
             I use AI where it improves speed, research and workflow efficiency - helping reduce wasted time and keep projects more cost-effective, without replacing real strategy or hands-on execution.
           </p>
+        </div>
+
+        <div class="back-to-top-wrap">
+          <a href="#top" class="back-to-top-link">Back to top</a>
         </div>
       </div>
     </section>
@@ -438,4 +746,3 @@
   <script src="js/script.js"></script>
 </body>
 </html>
-
