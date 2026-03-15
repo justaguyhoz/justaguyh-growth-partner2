@@ -1,4 +1,4 @@
-:root {
+  :root {
   --bg: #0b1020;
   --bg-soft: #121a31;
   --panel: #ffffff;
@@ -1009,6 +1009,68 @@ textarea:focus {
 
 .services-page .service-price strong {
   color: var(--accent);
+}
+.services-tabs-outer {
+  position: sticky;
+  top: 76px;
+  z-index: 30;
+  background: #ffffff;
+  padding: 10px 0 12px;
+  border-bottom: 1px solid var(--line);
+}
+
+.services-tabs {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.services-tab {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  padding: 10px 14px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.06);
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--text);
+  transition: 0.2s ease;
+}
+
+.services-tab:hover {
+  border-color: rgba(29, 78, 216, 0.28);
+  transform: translateY(-1px);
+}
+
+@media (max-width: 760px) {
+  .services-tabs-outer {
+    top: 76px;
+    padding: 10px 0;
+  }
+
+  .services-tabs {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: 4px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .services-tabs::-webkit-scrollbar {
+    display: none;
+  }
+
+  .services-tab {
+    flex: 0 0 auto;
+    min-height: 40px;
+    padding: 10px 14px;
+    font-size: 0.9rem;
+    white-space: nowrap;
+  }
 }
 
 /* Tablet */
