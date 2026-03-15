@@ -938,6 +938,19 @@ textarea:focus {
 
 /* Services page dropdowns - scoped */
 
+.back-to-top-wrap {
+  padding: 10px 0 0;
+  text-align: center;
+}
+
+.back-to-top-link {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.back-to-top-link:hover {
+  text-decoration: underline;
+}
 .services-page .service-accordion-simple {
   display: grid;
   gap: 18px;
