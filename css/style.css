@@ -177,11 +177,14 @@ img {
 }
 
 .hero-points span {
-  padding: 8px 12px;
-  border: 1px solid rgba(255, 255, 255, 0.14);
+  padding: 6px 11px;
+  border: 1px solid rgba(255, 255, 255, 0.10);
   border-radius: 999px;
-  color: rgba(255, 255, 255, 0.82);
-  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 0.84rem;
+  font-weight: 500;
+  background: rgba(255, 255, 255, 0.02);
+  pointer-events: none;
 }
 
 /* Page hero */
@@ -320,6 +323,80 @@ img {
 
 .packages-teaser-grid {
   grid-template-columns: repeat(4, 1fr);
+}
+
+/* Homepage package category cards */
+
+.package-category-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.package-category-card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 28px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.package-category-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+.package-category-card h3 {
+  margin: 0 0 12px;
+  font-size: 1.65rem;
+  line-height: 1.2;
+}
+
+.package-category-text {
+  margin: 0 0 22px;
+  color: var(--text-light);
+}
+
+.package-tier-list {
+  display: grid;
+  gap: 10px;
+  margin: 0 0 22px;
+}
+
+.package-tier-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--panel-soft);
+}
+
+.tier-name {
+  font-weight: 700;
+  color: var(--text);
+}
+
+.tier-price {
+  font-weight: 700;
+  color: var(--accent);
+  white-space: nowrap;
+}
+
+.service-ai-note {
+  max-width: 760px;
+  margin: 26px auto 0;
+  text-align: center;
+}
+
+.service-ai-note p {
+  margin: 0;
+  color: var(--text-light);
+  font-size: 0.98rem;
+  line-height: 1.65;
 }
 
 /* Cards */
@@ -914,7 +991,8 @@ textarea:focus {
   .card-grid,
   .case-grid,
   .check-grid,
-  .packages-teaser-grid {
+  .packages-teaser-grid,
+  .package-category-grid {
     grid-template-columns: 1fr 1fr;
   }
 
@@ -973,7 +1051,8 @@ textarea:focus {
   .card-grid,
   .case-grid,
   .check-grid,
-  .packages-teaser-grid {
+  .packages-teaser-grid,
+  .package-category-grid {
     grid-template-columns: 1fr;
   }
 
@@ -995,7 +1074,8 @@ textarea:focus {
   .contact-panel,
   .service-item,
   .case-study,
-  .service-summary-card {
+  .service-summary-card,
+  .package-category-card {
     padding: 22px;
   }
 
@@ -1057,6 +1137,14 @@ textarea:focus {
   .testimonial-card img {
     height: 38px;
     margin-top: 10px;
+  }
+
+  .package-tier-row {
+    padding: 11px 12px;
+  }
+
+  .package-category-card h3 {
+    font-size: 1.4rem;
   }
 }
 
