@@ -1085,6 +1085,16 @@ textarea:focus {
     white-space: nowrap;
   }
 }
+.services-page .services-tabs {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.services-page .services-tabs-outer .container {
+  display: flex;
+  justify-content: center;
+}
 
 /* Tablet */
 
