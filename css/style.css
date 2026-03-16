@@ -1279,3 +1279,6 @@ textarea:focus {
     font-size: 0.96rem;
   }
 }
+.services-page .page-hero .lead {
+  color: var(--text-light) !important;
+}
