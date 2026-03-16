@@ -3,74 +3,37 @@ const siteNav = document.querySelector(".site-nav");
 
 if (navToggle && siteNav) {
   navToggle.addEventListener("click", () => {
-    const isOpen = siteNav.classList.toggle("open");
-    navToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+    siteNav.classList.toggle("open");
   });
 }
 
-// Animated counters
-const counters = document.querySelectorAll(".count");
 
-if (counters.length > 0) {
-  let countersStarted = false;
 
-  const startCounting = () => {
-    if (countersStarted) return;
-    countersStarted = true;
+const tabs = document.querySelectorAll(".services-tab");
+const sections = document.querySelectorAll(".service-section");
 
-    counters.forEach(counter => {
-      const target = +counter.getAttribute("data-target");
-      let count = 0;
+window.addEventListener("scroll", () => {
 
-      const update = () => {
-        const increment = target / 80;
-        count += increment;
+  let current = "";
 
-        if (count < target) {
-          counter.innerText = Math.ceil(count);
-          requestAnimationFrame(update);
-        } else {
-          counter.innerText = target;
-        }
-      };
+  sections.forEach(section => {
 
-      update();
-    });
-  };
+    const sectionTop = section.offsetTop - 120;
 
-  const metricsSection = document.querySelector(".results-bar");
+    if (window.scrollY >= sectionTop) {
+      current = section.getAttribute("id");
+    }
 
-  if (metricsSection) {
-    const counterObserver = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          startCounting();
-          counterObserver.disconnect();
-        }
-      });
-    }, { threshold: 0.35 });
-
-    counterObserver.observe(metricsSection);
-  }
-}
-
-// Scroll reveal animation
-const revealItems = document.querySelectorAll(".reveal");
-
-if (revealItems.length > 0) {
-  const revealObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("in-view");
-        revealObserver.unobserve(entry.target);
-      }
-    });
-  }, {
-    threshold: 0.15,
-    rootMargin: "0px 0px -40px 0px"
   });
 
-  revealItems.forEach(item => {
-    revealObserver.observe(item);
+  tabs.forEach(tab => {
+
+    tab.classList.remove("active");
+
+    if (tab.getAttribute("href") === "#" + current) {
+      tab.classList.add("active");
+    }
+
   });
-}
+
+});
