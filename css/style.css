@@ -1313,3 +1313,20 @@ textarea:focus {
 }.services-page .page-hero .lead {
   color: var(--text-light) !important;
 }
+.package-category-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.package-category-link:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  border-color: rgba(29, 78, 216, 0.22);
+}
+
+.package-category-link h3,
+.package-category-link p {
+  text-decoration: none;
+}
