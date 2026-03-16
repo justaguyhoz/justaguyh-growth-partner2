@@ -1282,3 +1282,22 @@ textarea:focus {
 .services-page .page-hero .lead {
   color: var(--text-light) !important;
 }
+.back-to-top {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background: #0f172a;
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 999px;
+  font-size: 14px;
+  text-decoration: none;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  transition: transform .2s ease, opacity .2s ease;
+  opacity: 0.9;
+}
+
+.back-to-top:hover {
+  transform: translateY(-2px);
+  opacity: 1;
+}
