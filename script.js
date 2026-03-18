@@ -92,12 +92,10 @@ const serviceTabs = document.querySelectorAll('.services-tab');
 const serviceSections = Array.from(document.querySelectorAll('#websites, #shopify, #paid-ads'));
 
 if (serviceTabs.length > 0 && serviceSections.length > 0) {
-  let tabLockUntil = 0;
+  const activeMap = new Map(serviceTabs.length ? Array.from(serviceTabs).map((tab) => [tab.getAttribute('href'), tab]) : []);
 
   const setActiveTab = (id) => {
-    serviceTabs.forEach((tab) => {
-      tab.classList.toggle('active', tab.getAttribute('href') === `#${id}`);
-    });
+    serviceTabs.forEach((tab) => tab.classList.toggle('active', tab.getAttribute('href') === `#${id}`));
   };
 
   serviceTabs.forEach((tab) => {
@@ -105,34 +103,22 @@ if (serviceTabs.length > 0 && serviceSections.length > 0) {
       const href = tab.getAttribute('href');
       const target = document.querySelector(href);
       if (!target) return;
-
       event.preventDefault();
-      tabLockUntil = Date.now() + 900;
       setActiveTab(target.id);
       history.replaceState(null, '', href);
-
       const offset = target.getBoundingClientRect().top + window.scrollY - 150;
       window.scrollTo({ top: offset, behavior: 'smooth' });
-
-      window.setTimeout(() => {
-        setActiveTab(target.id);
-      }, 950);
     });
   });
 
   const updateActiveFromScroll = () => {
-    if (Date.now() < tabLockUntil) return;
-
-    const triggerLine = window.innerHeight * 0.35;
+    const headerOffset = 220;
     let currentId = serviceSections[0].id;
-
-    serviceSections.forEach((section) => {
-      const rect = section.getBoundingClientRect();
-      if (rect.top <= triggerLine) {
+    for (const section of serviceSections) {
+      if (window.scrollY + headerOffset >= section.offsetTop) {
         currentId = section.id;
       }
-    });
-
+    }
     setActiveTab(currentId);
   };
 
