@@ -54,7 +54,7 @@ h1,
 h2,
 h3,
 h4 {
-  margin: 0 0 1rem;
+  margin: 0 0 0.7rem;
   line-height: 1.15;
   letter-spacing: -0.02em;
 }
@@ -146,6 +146,7 @@ main {
 
 .page-hero {
   padding: 52px 0 24px;
+  background: linear-gradient(180deg, #f7fbff 0%, #ffffff 100%);
 }
 
 .eyebrow,
@@ -311,10 +312,6 @@ main {
   background: linear-gradient(180deg, #f7fbff 0%, #ffffff 100%);
 }
 
-.page-hero {
-  background: linear-gradient(180deg, #f7fbff 0%, #ffffff 100%);
-}
-
 .hero-grid,
 .split-grid,
 .case-study-grid {
@@ -331,17 +328,26 @@ main {
   max-width: 760px;
 }
 
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 20px;
+}
+
 .hero-points {
   display: grid;
   grid-template-columns: repeat(5, auto);
-  gap: 12px 22px;
+  gap: 8px 22px;
   margin-top: 20px;
+  padding-left: 1.2rem;
   color: var(--text);
 }
 
-.hero-points span {
+.hero-points li {
   font-weight: 600;
   white-space: nowrap;
+  line-height: 1.4;
 }
 
 .hero-image {
@@ -941,6 +947,18 @@ main {
   color: var(--text);
 }
 
+.service-mini-list li,
+.clean-list li,
+.package-content li {
+  line-height: 1.45;
+}
+
+.service-mini-list li + li,
+.clean-list li + li,
+.package-content li + li {
+  margin-top: 0.3rem;
+}
+
 @media (max-width: 1024px) {
   .hero-grid,
   .split-grid,
@@ -1045,11 +1063,12 @@ main {
 
   .hero-points {
     grid-template-columns: 1fr 1fr;
-    gap: 8px 20px;
+    gap: 6px 16px;
     margin-top: 16px;
+    padding-left: 1rem;
   }
 
-  .hero-points span {
+  .hero-points li {
     font-size: 0.95rem;
     line-height: 1.3;
   }
@@ -1120,17 +1139,6 @@ main {
     flex-direction: column;
   }
 }
-.service-mini-list li,
-.clean-list li,
-.package-content li {
-  line-height: 1.45;
-}
-
-.service-mini-list li + li,
-.clean-list li + li,
-.package-content li + li {
-  margin-top: 0.3rem;
-}
 
 @media (max-width: 520px) {
   h1 {
@@ -1164,7 +1172,7 @@ main {
 
   .hero-points {
     grid-template-columns: 1fr 1fr;
-    gap: 12px 20px;
+    gap: 8px 16px;
   }
 
   .hero-image {
@@ -1174,7 +1182,4 @@ main {
   .hero-image img {
     max-width: 180px;
   }
-}
-h1, h2, h3, h4 {
-  margin: 0 0 0.7rem;
 }
