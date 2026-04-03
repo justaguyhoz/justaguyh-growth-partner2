@@ -340,22 +340,6 @@ main {
   transform: translateY(-50%);
 }
 
-.hero-image {
-  justify-self: end;
-  width: 100%;
-  max-width: 320px;
-}
-
-.hero-image img {
-  width: 62%;
-  max-width: 260px;
-  margin-left: auto;
-  aspect-ratio: 4 / 5;
-  object-fit: cover;
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-md);
-}
-
 .card-grid,
 .testimonial-grid,
 .results-grid,
